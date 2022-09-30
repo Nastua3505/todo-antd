@@ -2,18 +2,20 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  font-family: fantasy;
-  background-color: #0000001a;
 }
+
 body {
-  margin: 0;
+  background-color: rgb(174, 101, 12);
+}
+.App-header h1 {
+  margin-top: 50px;
 }
 
 .App-header {
   background: radial-gradient(
     circle farthest-corner at 100px 50px,
     #fbf2eb,
-    #352a3b
+    #360fc3
   );
   min-height: 80vh;
 
@@ -21,14 +23,15 @@ body {
   width: 900px;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: #277c9b;
 }
 .App-Todo {
   margin: 30px 0 0 30px;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 0 3px 15px #0000001a;
+  box-shadow: 0 3px 15px #511f421a;
   overflow: hidden;
 }
 .ant-list-lg .ant-list-item {
-  background-color: rgb(31, 77, 134);
+  background-color: rgba(129, 173, 210, 0.795);
 }

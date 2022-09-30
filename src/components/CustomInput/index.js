@@ -1,32 +1,31 @@
-import { Input, Button,Row,Col} from 'antd';
-import{useState } from 'react';
+import { Input, Button, Row, Col } from "antd";
+import { useState } from "react";
 
-const CustomInput= ({addTodo})=>{
+const CustomInput = ({ addTodo }) => {
+  const [text, setText] = useState("");
 
-    const[text, setText]= useState("")
-    
-    const handleClick=()=>{
-addTodo(text);
-setText("");
-    };
+  const handleClick = () => {
+    addTodo(text);
+    setText("");
+  };
 
-    return(
-        
-        <Row>
-        <Col offset={8}span={8}>
-            <Input onChange={(e)=> setText(e.target.value)} 
-    value={text}
-    placeholder="Basic usage" 
-    onPressEnter={()=> handleClick()}
-    />
-    
-    </Col>
-        <Col span={1}>
-            <Button  type="primary" onClick={()=> handleClick()} >Add ToDo </Button>
-    </Col>
-      </Row>
-    
-    )}
-    
-    export default CustomInput;
-    
+  return (
+    <Row>
+      <Col offset={7} span={8}>
+        <Input
+          onChange={(e) => setText(e.target.value)}
+          value={text}
+          placeholder="Basic usage"
+          onPressEnter={() => handleClick()}
+        />
+      </Col>
+      <Col span={2}>
+        <Button type="primary" onClick={() => handleClick()}>
+          Add ToDo{" "}
+        </Button>
+      </Col>
+    </Row>
+  );
+};
+
+export default CustomInput;
